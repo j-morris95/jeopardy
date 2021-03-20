@@ -1,0 +1,107 @@
+@import url(//db.onlinewebfonts.com/c/e3e3a81b2544f4508a75573a04e0cafa?family=ITC+Korinna);
+
+@font-face {
+  font-family: "ITC Korinna";
+  src: url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.eot");
+  src: url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.svg#ITC Korinna") format("svg");
+}
+
+#jeopardy {
+  text-align: center;
+  font-weight: bold;
+  background-color: #151685;
+  color: white;
+  border-collapse: collapse;
+  font-family: "ITC Korinna";
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92%;
+}
+
+.img-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e2e3f7;
+  font-family: "ITC Korinna";
+  font-size: 40pt;
+  text-transform: uppercase;
+  text-shadow: #f0a04f 2px 2px
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+thead {
+  border-bottom: solid 12px black;
+}
+
+th,
+td {
+  border: solid 6px black;
+  width: 14em;
+  height: 3em;
+  padding: 1em;
+  font-weight: bold;
+  font-size: 16pt;
+  text-shadow: black 1px 1px
+}
+
+th {
+  text-transform: uppercase;
+}
+
+td {
+  color: #d69f4c;
+
+}
+
+td:hover {
+  cursor: pointer;
+  background-color: #747cac;
+}
+
+body {
+  background-color: black;
+}
+
+#restart {
+  justify-self: center;
+  font-family: "ITC Korinna";
+  font-size: 12pt;
+  text-transform: uppercase;
+}
+
+#restart:hover {
+  color: black;
+  background-color: #848484;
+}
+
+.block {
+  display: block;
+  width: 25%;
+  border: solid 6px black;
+  background-color: #2e2e2e;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
