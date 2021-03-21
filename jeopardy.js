@@ -76,7 +76,7 @@ async function getCategory(catId) {
  *   (initally, just show a "?" where the question/answer would go.)
  */
 
-async function fillTable() {
+function fillTable() {
   $("#jeopardy thead").empty();
   let $tr = $("<tr>");
   for (let category of categories) {
@@ -102,16 +102,25 @@ async function fillTable() {
  * - if currently "answer", ignore click
  * */
 
+const SHOWING_ENUM = {
+  QUESTION: "QUESTION",
+  ANSWER: "ANSWER",
+  NONE: null,
+};
+
 function handleClick(evt) {
   const id = evt.target.id;
   const [catIdx, clueIdx] = id.split("-");
   const clickedClue = categories[catIdx].clues[clueIdx];
-  if (clickedClue.showing === "question") {
-    $(`#${id}`).html(clickedClue.answer);
-    clickedClue.showing = "answer";
-  } else if (clickedClue.showing === null) {
-    $(`#${id}`).html(clickedClue.question);
-    clickedClue.showing = "question";
+  switch (clickedClue.showing) {
+    case SHOWING_ENUM.QUESTION:
+      $(`#${id}`).html(clickedClue.answer);
+      clickedClue.showing = SHOWING_ENUM.ANSWER;
+      break;
+    case SHOWING_ENUM.NONE:
+      $(`#${id}`).html(clickedClue.question);
+      clickedClue.showing = SHOWING_ENUM.QUESTION;
+      break;
   }
 }
 
